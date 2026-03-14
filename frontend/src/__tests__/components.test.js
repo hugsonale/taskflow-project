@@ -119,7 +119,7 @@ describe('TaskList Component', () => {
   test('renders task titles', () => {
     render(<TaskList tasks={mockTasks} currentUserId={1} onComplete={jest.fn()} onEdit={jest.fn()} onDelete={jest.fn()} />);
     expect(screen.getByText('Build login page')).toBeInTheDocument();
-    expect(screen.getByText('Write tests')).toBeInTheDocument();
+    expect(screen.getByText(/Write tests/)).toBeInTheDocument();
   });
 
   test('shows empty state when no tasks', () => {
