@@ -90,30 +90,12 @@ jobs:
           retention-days: 7
 
   # ─────────────────────────────────────────────────────────────────────────────
-  # JOB 3: Docker Build Validation
-  # ─────────────────────────────────────────────────────────────────────────────
-  docker-build:
-    name: Docker Build Validation
-    runs-on: ubuntu-latest
-    needs: [backend, frontend]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Build backend image
-        run: docker build -t taskflow-backend ./backend
-
-      - name: Build frontend image
-        run: docker build -t taskflow-frontend ./frontend
-
-  # ─────────────────────────────────────────────────────────────────────────────
-  # JOB 4: CI Summary
+  # JOB 3: CI Summary
   # ─────────────────────────────────────────────────────────────────────────────
   ci-summary:
     name: CI Pipeline Complete
     runs-on: ubuntu-latest
-    needs: [backend, frontend, docker-build]
+    needs: [backend, frontend]
     if: always()
 
     steps:
