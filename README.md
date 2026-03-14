@@ -41,7 +41,7 @@ taskflow-project/
 │
 ├── .github/
 │   └── workflows/
-│       └── ci.yml            # GitHub Actions CI pipeline
+│       └── ci.yml           
 │
 ├── docker-compose.yml
 └── README.md
