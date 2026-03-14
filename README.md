@@ -353,4 +353,4 @@ curl -X POST http://localhost:8000/tasks/ \
 
 ---
 
-*Built to demonstrate CI/CD best practices in a realistic full-stack context.*
+*Built to demonstrate CI/CD best practices in a realistic full-stack context.
