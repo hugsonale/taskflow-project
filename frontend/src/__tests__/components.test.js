@@ -32,7 +32,8 @@ describe('Login Component', () => {
 
   test('renders TaskFlow branding', () => {
     render(<Login onLogin={jest.fn()} onSwitchToRegister={jest.fn()} />);
-    expect(screen.getByText(/TaskFlow/i)).toBeInTheDocument();
+    const matches = screen.getAllByText(/TaskFlow/i);
+    expect(matches.length).toBeGreaterThan(0);
   });
 
   test('renders link to registration', () => {
@@ -110,7 +111,7 @@ describe('TaskList Component', () => {
       is_completed: true,
       creator_id: 2,
       creator: { id: 2, username: 'bob', full_name: 'Bob Jones' },
-      assignee: { id: 1, username: 'alice', full_name: 'Alice Smith' },
+      assignee: { id: 3, username: 'carol', full_name: 'Carol White' },
       created_at: '2024-01-02T00:00:00Z',
     },
   ];
@@ -149,7 +150,7 @@ describe('TaskList Component', () => {
 
   test('shows assignee name when task has assignee', () => {
     render(<TaskList tasks={mockTasks} currentUserId={1} onComplete={jest.fn()} onEdit={jest.fn()} onDelete={jest.fn()} />);
-    expect(screen.getByText(/Alice Smith/)).toBeInTheDocument();
+    expect(screen.getByText(/Carol White/)).toBeInTheDocument();
   });
 });
 
