@@ -36,6 +36,7 @@ jobs:
         run: pytest tests/ -v --tb=short
         env:
           DATABASE_URL: sqlite:///./test_taskflow.db
+          PYTHONPATH: .
 
       - name: Upload test database artifact (on failure)
         if: failure()
