@@ -102,7 +102,7 @@ Open a new terminal:
 ```bash
 cd frontend
 
-# Install dependencies
+# Install dependencie
 npm install
 
 # Start the development server
