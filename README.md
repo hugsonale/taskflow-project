@@ -138,7 +138,7 @@ pytest tests/ -v --cov=app --cov-report=term-missing
 - Task retrieval (list, single, not found)
 - Task update (success, unauthorised)
 - Task completion
-- Task deletion (success, unauthorised)
+- Task deletion (success, unauthorisd)
 - Task assignment to team members
 
 ### Frontend Tests (Jest + React Testing Library)
