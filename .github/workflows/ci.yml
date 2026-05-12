@@ -71,7 +71,7 @@ jobs:
         run: npm run build
         env:
           CI: false
-          REACT_APP_API_URL: http://localhost:8000
+          REACT_APP_API_URL: http://54.85.41.189:8000
 
   # ─── JOB 3: Build & Push Docker Images to AWS ECR ────────────────────
   build-and-push:
